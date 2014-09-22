@@ -31,14 +31,18 @@
     <col width="200px" />
 
 <c:forEach items="${Pizzat}" var="item">
-	<form action="controller" name="poista" method="post">
+	<tr>
 	<td></td>
     <td>${item.getId()}</td>
 	<td>${item.getNimi()}</td>
 	<td><c:out value="${item.hinta}"/></td>
 	<td></td>  
-    <td><input type="image" src="img/cross.PNG" alt="Submit Form" name='id' value = '${item.getId()}' /> </td>
-  	<tr>
+    <td><form action="poista" method="post">
+    <!--  <input type="image" src="img/cross.PNG" alt="Submit Form" name='id' value = "${item.getId()}" /> -->
+    <input type="hidden" name="id" value="${item.getId()}" />
+    <button type="submit">poista</button>
+    </form></td>
+  	</tr>
   	</c:forEach>
 </table>
 </div>

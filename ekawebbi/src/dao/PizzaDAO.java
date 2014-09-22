@@ -102,18 +102,29 @@ public class PizzaDAO {
 
 	public void poistaPizza(String kolmas) {
 		avaaYhteys();
+		System.out.println(kolmas);
+		
+		
+		 int id = 0 ;
+		 
+         try {
+                 id = Integer.parseInt(kolmas);
+         } catch (NumberFormatException e) {
+                 e.printStackTrace();
+         }
 		
 		try {
 			
 			//alustetaan sql-lause
-			String sql = "delete from pizza where id='?'";
+			String sql = "delete from pizza where id="+id+";";
 			PreparedStatement lause = yhteys.prepareStatement(sql);
-			
+
 			//täytetään puuttuvat tiedot
-			lause.setString(0, kolmas);
+		
 			
 			//suoritetaan lause
 			lause.executeUpdate();
+			System.out.println("POISTETTIIN PIZZA TIETOKANNASTA!");
 		} catch(Exception e) {
 			//JOTAIN VIRHETTÄ TAPAHTUI
 		}finally {
