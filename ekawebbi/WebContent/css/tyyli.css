@@ -1,0 +1,80 @@
+#container {
+	margin-left: auto;
+	margin-right: auto
+}
+
+#header {
+	text-align: center;
+	 font-size: 36px;
+	 background-color: #C0C0C0;
+	 margin: 0px;
+}
+
+#content {
+	 border: 2px solid;
+	text-align: center;
+	 font-size: 24px;
+	 margin: 0px;
+}
+
+#add {
+	background-color: #C0C0C0;
+	padding:0;
+    margin:0;
+}
+
+#addimage {
+	background-color: #C0C0C0;
+	margin: 0px;
+}
+
+img  {
+    float: right;
+    
+} 
+
+#footer {
+	text-align: right;
+	background-color: #C0C0C0;
+	margin: 0px;
+	padding: 0;
+}
+
+#addtext {
+	float : left;
+	margin: 0px;
+	padding: 0;
+	vertical-align:middle;
+}
+
+label, input {
+    display: block;
+    text-align: center;
+}
+ul.form {
+    width  : 810px;
+    padding: 0px;
+    margin : 0px;
+    list-style-type: none;
+}
+ul.form li  {
+    width : 810px;
+}
+ul.form li input {
+    width : 200px;
+}
+ul.form li textarea {
+    width : 450px;
+    height: 150px;
+}
+ul.form li.twoColumnPart {
+    float : left;
+    width : 250px;
+}
+
+table.fixed { table-layout:fixed; }
+table.fixed td { overflow: hidden; }
+
+p {
+    margin: 0;
+}
